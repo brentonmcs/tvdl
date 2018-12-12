@@ -1,0 +1,55 @@
+hash: 84dced7c0afded054bf3130a73d4366d8298ad570f29ab67b64769dd68802938
+updated: 2018-12-09T15:13:49.58981+11:00
+imports:
+- name: github.com/andybalholm/cascadia
+  version: 680b6a57bda4f657485ad44bdea42342ead737bc
+- name: github.com/brentonmcs/tv_manager
+  version: be40d60b94ba644448cf8f8a30d4c8ec521406b1
+  subpackages:
+  - renamer
+- name: github.com/hekmon/cunits
+  version: 3c45cb0124f153c1e8bbd2e965cf657c59331d49
+- name: github.com/hekmon/transmissionrpc
+  version: 652497ba4e634fad5f6f09e420ce021a6dbab9a0
+- name: github.com/mmcdole/gofeed
+  version: 42010a154d249f5f753dfe03a6390b59671e403e
+  subpackages:
+  - atom
+  - extensions
+  - internal/shared
+  - rss
+- name: github.com/mmcdole/goxpp
+  version: 0068e33feabfc0086c7aeb58a9603f91c061c89f
+- name: github.com/op/go-logging
+  version: b2cb9fa56473e98db8caba80237377e83fe44db5
+- name: github.com/PuerkitoBio/goquery
+  version: 2d2796f41742ece03e8086188fa4db16a3a0b458
+- name: github.com/renstrom/fuzzysearch
+  version: b18e754edff4833912ef4dce9eaca885bd3f0de1
+  subpackages:
+  - fuzzy
+- name: golang.org/x/net
+  version: 1c05540f6879653db88113bc4a2b70aec4bd491f
+  subpackages:
+  - html
+  - html/atom
+  - html/charset
+- name: golang.org/x/text
+  version: b19bf474d317b857955b12035d2c5acb57ce8b01
+  subpackages:
+  - encoding
+  - encoding/charmap
+  - encoding/htmlindex
+  - encoding/internal
+  - encoding/internal/identifier
+  - encoding/japanese
+  - encoding/korean
+  - encoding/simplifiedchinese
+  - encoding/traditionalchinese
+  - encoding/unicode
+  - internal/tag
+  - internal/utf8internal
+  - language
+  - runes
+  - transform
+testImports: []
