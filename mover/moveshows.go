@@ -28,6 +28,11 @@ func NewMoveShowHandler(homeTvDirectory string) *MoveShowHandle {
 //MoveTvShowHome - takes the renamed file and moves it home
 func (m *MoveShowHandle) MoveTvShowHome(t *renamer.TvShowDetails) {
 
+	log.Printf("Extension is %s", t.Extension)
+	if strings.Contains(t.Extension, "part") {
+		log.Printf("Not moving as file is not the full version")
+		return
+	}
 	if t.Season == 0 {
 		log.Printf("Not moving file as Season details were not found")
 		return
@@ -37,6 +42,7 @@ func (m *MoveShowHandle) MoveTvShowHome(t *renamer.TvShowDetails) {
 		log.Printf("Not moving file as Show %s folder not found", t.ComputedName)
 		return
 	}
+
 	showDirectory := m.findShowDirectory(t.Name)
 	seasonDirectory := m.findSeasonDirectory(showDirectory, t.Season)
 	newShowPath := filepath.Join(seasonDirectory, t.ComputedName)

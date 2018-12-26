@@ -12,7 +12,7 @@ type TvShowDetails struct {
 	Path         string
 	Season       int
 	episode      int
-	extension    string
+	Extension    string
 	ComputedName string
 }
 
@@ -36,7 +36,7 @@ func (p *parsedFileDetails) validSeasonFound() bool {
 func NewTvShowDetails(parsedFileDetails parsedFileDetails, extension, path string) *TvShowDetails {
 	computedName := fmt.Sprintf("%v S%02dE%02d%v", strings.Title(parsedFileDetails.name), parsedFileDetails.season, parsedFileDetails.episode, extension)
 	return &TvShowDetails{Name: parsedFileDetails.name,
-		Season: parsedFileDetails.season, episode: parsedFileDetails.episode, extension: extension, ComputedName: computedName, Path: path}
+		Season: parsedFileDetails.season, episode: parsedFileDetails.episode, Extension: extension, ComputedName: computedName, Path: path}
 }
 
 //GetTvShowDetails renames the file so it's a clean TV Show Name

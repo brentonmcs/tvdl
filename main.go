@@ -35,6 +35,9 @@ func main() {
 	feedTicker := time.NewTicker(minutes)
 	moveTicker := time.NewTicker(minutes)
 
+	processHandle.ProcessFeed()
+	startMoving(downloadDir, moveHandler)
+
 	for {
 		select {
 		case <-moveTicker.C:
